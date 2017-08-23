@@ -18,7 +18,6 @@ phases:
     commands:
       - echo Entering post_build phase...
       - echo Build completed on `date`
-      - mv target/ROOT .
 artifacts:
   type: zip
   files:

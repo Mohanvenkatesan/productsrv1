@@ -18,8 +18,9 @@ phases:
     commands:
       - echo Entering post_build phase...
       - echo Build completed on `date`
-artifacts:  type: zip
-  files:
+artifacts:
+type: zip
+files:
     - 'target/productsrvapp/WEB-INF/classes/com/product/config/WebConfig.class'
     - 'target/productsrvapp/WEB-INF/classes/com/product/controller/SampleController.class'
     - 'target/productsrvapp/WEB-INF/classes/com/product/controller/ProductController.class'

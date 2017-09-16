@@ -1,0 +1,42 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - echo Entering install phase...
+      - echo Nothing to do in the install phase...
+  pre_build:
+    commands:
+      - echo Entering pre_build phase...
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Entering build phase...
+      - echo Build started on `date`
+      - mvn -f pom.xml compile war:exploded
+  post_build:
+    commands:
+      - echo Entering post_build phase...
+      - echo Build completed on `date`
+artifacts:
+  type: zip
+  files:
+    - '/WEB-INF/classes/com/product/config/WebConfig.class'
+    - '/WEB-INF/classes/com/product/controller/SampleController.class'
+    - '/WEB-INF/classes/com/product/controller/ProductController.class'
+    - '/WEB-INF/classes/com/product/dto/ProductDTO.class'
+    - '/WEB-INF/lib/commons-logging-1.2.jar'
+    - '/WEB-INF/lib/jackson-annotations-2.5.0.jar'
+    - '/WEB-INF/lib/jackson-core-2.5.0.jar'
+    - '/WEB-INF/lib/jackson-databind-2.5.0.jar'
+    - '/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar'
+    - '/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar'
+    - '/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar'
+    - '/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar'
+    - '/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar'
+    - '/WEB-INF/lib/spring-web-4.3.7.RELEASE.jar'
+    - '/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar'
+    - '/WEB-INF/sample-servlet.xml'
+    - '/WEB-INF/web.xml'
+    - '/index.html'
+    - '/META-INF/MANIFEST.MF'

@@ -28,7 +28,7 @@
   </dependencies>
   
 <build>
-		<finalName>productsrvapp</finalName>
+	<finalName>productsrvapp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -37,6 +37,18 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+		
+	<plugin>
+		<artifactId>maven-assembly-plugin</artifactId>
+		<version>2.5.3</version>
+		<configuration>
+			<descriptors>
+				<descriptor>src/main/java/com/product/config/crunchify.xml</descriptor>
+			</descriptors>
+			<tarLongFileMode>posix</tarLongFileMode>
+		</configuration>
+	</plugin>
+		
         </plugins>
 </build>
     

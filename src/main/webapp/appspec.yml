@@ -1,5 +1,5 @@
 version: 0.0
 os: windows
 files:
-  - source: \target\productsrvapp
+  - source: \
     destination: C:\softwares\apachetomcat\webapps\productsrvapp

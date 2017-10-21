@@ -13,7 +13,7 @@ public class ProductTest {
 
 	@Test
     public void testSum() {
-        assertEquals(7, 7);
+        assertEquals(7, 6);
     }
 
 }
